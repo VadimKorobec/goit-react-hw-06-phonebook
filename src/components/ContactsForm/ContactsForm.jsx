@@ -45,15 +45,17 @@ export const ContactsForm = ({ formSubmitHandle }) => {
   return (
     <>
       <form onSubmit={handleSubmit}>
+        Name
         <input
           type="text"
           name="name"
           value={name}
-          onChange ={handleChance}
+          onChange={handleChance}
           pattern="^[a-zA-Zа-яА-Я]+(([' -][a-zA-Zа-яА-Я ])?[a-zA-Zа-яА-Я]*)*$"
           title="Name may contain only letters, apostrophe, dash and spaces. For example Adrian, Jacob Mercer, Charles de Batz de Castelmore d'Artagnan"
           required
         />
+        Number
         <input
           type="tel"
           name="number"
