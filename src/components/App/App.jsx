@@ -2,6 +2,7 @@ import { ContactsForm } from 'components/ContactsForm/ContactsForm';
 import { ContactsList } from 'components/ContactsList/ContactsList';
 import { Filter } from 'components/Filter/Filter';
 import { useState, useEffect } from 'react';
+import { Container } from './App.styled';
 
 export const App = () => {
   const startContacts =
@@ -34,7 +35,7 @@ export const App = () => {
   }, [contacts]);
 
   return (
-    <div>
+    <Container>
       <h1>Phonebook</h1>
       <ContactsForm formSubmitHandle={formSubmitHandler} />
       <h2>Contacts</h2>
@@ -44,6 +45,6 @@ export const App = () => {
         filter={filter}
         deleteContact={deleteContact}
       />
-    </div>
+    </Container>
   );
 };
