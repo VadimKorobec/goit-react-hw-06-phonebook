@@ -8,14 +8,14 @@ export const ContactsListItem = ({ contact }) => {
   const handleDeleteContact = () => dispatch(deleteContact(contact.id));
 
   return (
-    <>
+    <div>
       <span>
         {contact.name}:{contact.number}
       </span>
       <button type="button" onClick={handleDeleteContact}>
         Delete
       </button>
-    </>
+    </div>
   );
 };
 
