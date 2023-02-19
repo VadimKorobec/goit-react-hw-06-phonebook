@@ -7,11 +7,11 @@ export const ContactsList = () => {
 
   return (
     <>
-      <li>
+      <ul>
         {contacts.map(contact => {
           return <ContactsListItem key={contacts.id} contact={contact} />;
         })}
-      </li>
+      </ul>
     </>
   );
 };
