@@ -42,6 +42,7 @@ export const ContactsForm = () => {
     setName('');
     setNumber('');
   };
+
   return (
     <>
       <form onSubmit={handleSubmit}>
