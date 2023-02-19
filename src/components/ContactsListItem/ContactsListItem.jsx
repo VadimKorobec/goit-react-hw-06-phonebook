@@ -8,7 +8,7 @@ export const ContactsListItem = ({ contact }) => {
   const handleDeleteContact = () => dispatch(deleteContact(contact.id));
 
   return (
-    <div>
+    <>
       <li>
         <span>
           {contact.name}:{contact.number}
@@ -17,7 +17,7 @@ export const ContactsListItem = ({ contact }) => {
           Delete
         </button>
       </li>
-    </div>
+    </>
   );
 };
 
