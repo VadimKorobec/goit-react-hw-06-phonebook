@@ -29,7 +29,10 @@ export const ContactsForm = () => {
 
   const handleSubmit = event => {
     event.preventDefault();
-    if(contacts.find(contact => contact.name === ))
+    if (contacts.some(contact => contact.name === name)) {
+      alert('Contact already exists');
+      return;
+    }
     const contact = {
       id: shortid.generate(),
       name: name,
