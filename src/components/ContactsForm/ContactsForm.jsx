@@ -1,11 +1,13 @@
 import { useState } from 'react';
 import shortid from 'shortid';
-import { useDispatch } from 'react-redux';
+import { useDispatch, useSelector } from 'react-redux';
 import { addContact } from 'redux/contactSlice';
+import { getContacts } from 'redux/selectors';
 
 export const ContactsForm = () => {
   const [name, setName] = useState('');
   const [number, setNumber] = useState('');
+  const contacts = useSelector(getContacts);
   const dispatch = useDispatch();
 
   let nameInputId = shortid.generate();
@@ -26,7 +28,8 @@ export const ContactsForm = () => {
   };
 
   const handleSubmit = event => {
-    event.priventDefault();
+    event.preventDefault();
+    if(contacts.find(contact => contact.name === ))
     const contact = {
       id: shortid.generate(),
       name: name,
