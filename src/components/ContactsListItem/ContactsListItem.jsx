@@ -9,14 +9,12 @@ export const ContactsListItem = ({ contact }) => {
 
   return (
     <>
-      <li>
-        <span>
-          {contact.name}:{contact.number}
-        </span>
-        <button type="button" onClick={handleDeleteContact}>
-          Delete
-        </button>
-      </li>
+      <span>
+        {contact.name}:{contact.number}
+      </span>
+      <button type="button" onClick={handleDeleteContact}>
+        Delete
+      </button>
     </>
   );
 };
