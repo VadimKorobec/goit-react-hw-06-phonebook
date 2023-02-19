@@ -6,7 +6,7 @@ export const Filter = ({ filter, filterContact }) => {
     filterContact(value);
   };
   return (
-    <div>
+    <>
       <input
         type="text"
         name="filter"
@@ -14,6 +14,6 @@ export const Filter = ({ filter, filterContact }) => {
         onChange={handleChange}
         placeholder="Search..."
       />
-    </div>
+    </>
   );
 };
