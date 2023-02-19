@@ -8,9 +8,11 @@ export const ContactsList = () => {
   return (
     <>
       <ul>
-        {contacts.map(contact => {
-          return <ContactsListItem key={contacts.id} contact={contact} />;
-        })}
+        <li key={contacts.id}>
+          {contacts.map(contact => {
+            return <ContactsListItem contact={contact} />;
+          })}
+        </li>
       </ul>
     </>
   );
