@@ -5,9 +5,15 @@ export const contactSlice = createSlice({
   name: 'contacts',
   initialState: INITIAL_CONTACTS,
   reducers: {
-    addContact(state, action) {},
+    addContact(state, action) {
+      console.log(state);
+      console.log(action);
+      state.push(action.payload);
+    },
     deleteContact(state, action) {},
   },
 });
 
 export const contactsReducer = contactSlice.reducer;
+
+export const { addContact, deleteContact } = contactSlice.actions;
