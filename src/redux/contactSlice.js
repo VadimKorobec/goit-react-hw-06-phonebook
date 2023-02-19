@@ -1,6 +1,5 @@
 import { createSlice } from '@reduxjs/toolkit';
 import { INITIAL_CONTACTS } from './constants';
-// import { INITIAL_CONTACTS } from './constants';
 
 export const contactSlice = createSlice({
   name: 'contacts',
