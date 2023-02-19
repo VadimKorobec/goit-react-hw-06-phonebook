@@ -1,10 +1,15 @@
-import PropTypes from 'prop-types';
+import { useDispatch, useSelector } from 'react-redux';
+import { setFilter } from 'redux/filterSlice';
+import { getFilter } from 'redux/selectors';
 
-export const Filter = ({ filter, filterContact }) => {
+export const Filter = () => {
+  const filter = useSelector(getFilter);
+  const dispatch = useDispatch();
+
   const handleChange = event => {
-    const { value } = event.currentTarget;
-    filterContact(value);
+    dispatch(setFilter(event.target.value));
   };
+
   return (
     <>
       <input
